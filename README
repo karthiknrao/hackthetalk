@@ -1,0 +1,18 @@
+######################################
+
+CONTENTS:
+run.sh : script which is run in the terminal
+runtest.py : python script which does the classification
+12.hdf5 : model file
+README : readme file
+
+ENVIRONMENT:
+The OS environment needed is Ubuntu 14.04 LTS
+The run.sh script takes care of installing all the necessary libraries/softwares
+
+RUN:
+navigate to folder and
+./run.sh
+it is assumed that all the *.mp3 files are in the same directory as the run.sh file.
+
+######################################
