@@ -19,6 +19,17 @@ labels = 4
 files = glob.glob( '*.mp3' )
 labelid = [ 'angry', 'happy', 'neutral', 'unhappy' ]
 
+def joinfiles():
+    outfile = '12.hdf5'
+    odest = open(outfile,'w')
+    files = [ '000','001','002','003'\
+              '004','005','006' ]
+    for fname in files:
+        data = open('models/'+fname).read()
+        odest.write(data)
+    odest.close()
+    return
+
 def convertmp3wav(fname):
     cmd = 'sox %s temp_hack.wav'
     os.system( cmd % fname )
@@ -83,6 +94,9 @@ model.add(Activation('softmax'))
 
 sgd = SGD(lr=0.01, decay=1e-4, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd)
+
+print( 'Joining model parts...' )
+joinfiles()
 
 print( 'Loading Weights ....' )
 model.load_weights('12.hdf5')
