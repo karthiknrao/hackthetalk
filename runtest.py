@@ -16,7 +16,12 @@ data_size = 8000*10
 reshape_size = (400,200)
 labels = 4
 
-files = glob.glob( '../*' )
+inputfiles = glob.glob( '../*' )
+inputfiles.remove('../hackathon')
+files = []
+for fname in inputfiles:
+    files += [ x.strip() for x in open(fname).readlines() ]
+    
 labelid = [ 'angry', 'happy', 'neutral', 'unhappy' ]
 
 def joinfiles():
@@ -31,7 +36,7 @@ def joinfiles():
     return
 
 def convertmp3wav(fname):
-    cmd = 'sox %s temp_hack.wav'
+    cmd = 'sox "%s" temp_hack.wav'
     os.system( cmd % fname )
     return
 
