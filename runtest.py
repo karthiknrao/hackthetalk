@@ -16,7 +16,7 @@ data_size = 8000*10
 reshape_size = (400,200)
 labels = 4
 
-files = glob.glob( '*.mp3' )
+files = glob.glob( '../*' )
 labelid = [ 'angry', 'happy', 'neutral', 'unhappy' ]
 
 def joinfiles():
