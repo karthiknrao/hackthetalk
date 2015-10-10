@@ -22,7 +22,7 @@ labelid = [ 'angry', 'happy', 'neutral', 'unhappy' ]
 def joinfiles():
     outfile = '12.hdf5'
     odest = open(outfile,'w')
-    files = [ '000','001','002','003'\
+    files = [ '000','001','002','003',\
               '004','005','006' ]
     for fname in files:
         data = open('models/'+fname).read()
