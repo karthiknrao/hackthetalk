@@ -18,6 +18,8 @@ labels = 4
 
 inputfiles = glob.glob( '../*' )
 inputfiles.remove('../hackthetalk')
+inputfiles.remove('../hack')
+
 files = []
 for fname in inputfiles:
     files += [ x.strip() for x in open(fname).readlines() ]
