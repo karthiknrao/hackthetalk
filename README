@@ -3,7 +3,7 @@
 CONTENTS:
 run.sh : script which is run in the terminal
 runtest.py : python script which does the classification
-12.hdf5 : model file
+models/ : model files
 README : readme file
 
 ENVIRONMENT:
