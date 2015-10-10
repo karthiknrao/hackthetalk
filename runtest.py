@@ -19,6 +19,9 @@ labels = 4
 inputfiles = glob.glob( '../*' )
 inputfiles.remove('../hackthetalk')
 inputfiles.remove('../hack')
+mp3files = glob.glob( '../*.mp3')
+for mp3file in mp3files:
+    inputfiles.remove(mp3file)
 
 files = []
 for fname in inputfiles:
