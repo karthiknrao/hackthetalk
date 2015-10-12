@@ -25,7 +25,7 @@ for mp3file in mp3files:
 
 files = []
 for fname in inputfiles:
-    files += [ x.strip() for x in open(fname).readlines() ]
+    files += [ '../' + x.strip() for x in open(fname).readlines() ]
     
 labelid = [ 'angry', 'happy', 'neutral', 'unhappy' ]
 
