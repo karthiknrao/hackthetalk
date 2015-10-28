@@ -7,6 +7,6 @@ sudo apt-get -y install gfortran
 
 sudo apt-get -y install sox
 sudo apt-get -y install libsox-fmt-mp3
-sudo pip install -U keras
+sudo pip install keras==0.1.3
 
 python runtest.py
